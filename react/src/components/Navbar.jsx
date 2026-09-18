@@ -1,44 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import DarkLogo from "../assets/darkLogo.png";
 import LightLogo from "../assets/lightLogo.png";
 import { FaCartShopping } from "react-icons/fa6";
+import { HiMenu, HiX } from "react-icons/hi";
 import DarkMode from "./Darkmode";
 
+const navLinks = [
+  { Label: "Home", href: "#home" },
+  { Label: "Shop", href: "#shop" },
+  { Label: "Contact", href: "#contact" },
+  { Label: "About us", href: "#about" },
+];
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       <div className="bg-primary/40 py-3">
         <div className="container flex justify-between items-center gap-2 sm:gap-4">
-          {/* 1. Logo*/}
+          {/* 1. Logo */}
           <a
             href="#"
-            className="font-bold text-xl sm:text-2xl flex items-center gap-2"
+            className="font-bold text-xl sm:text-2xl flex items-center gap-2 shrink-0"
           >
             <img src={LightLogo} alt="logo" className="w-14 sm:w-20" />
-            {/* <img
-              src={DarkLogo}
-              alt="logo"
-              className="w-14 sm:w-20 hidden dark:block"
-            /> */}
           </a>
-          <div className="relative group hidden sm:block flex-1 max-w-xs mx-2">
+
+          <div className="hidden md:flex items-center">
+            <ul className="flex gap-6 text-sm lg:text-base">
+              {navLinks.map((link) => (
+                <li
+                  key={link.Label}
+                  onClick={() => setMenuOpen(false)}
+                  className="py-2 border-gray-100 dark:border-gray-800"
+                >
+                  <a
+                    href={link.href}
+                    className="cursor-pointer hover:text-secondary transition-colors block"
+                  >
+                    {link.Label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative group hidden sm:block flex-1 max-w-[180px] md:max-w-xs mx-2">
             <input
               type="text"
               placeholder="Search..."
-              className="w-full sm:w-[180px] md:w-[250px] 
-              group-hover:w-full 
+              className="w-full sm:w-[140px] md:w-[200px] lg:w-[250px]
+              group-hover:w-full
               transition-all duration-300
-              rounded-full border border-gray-300 dark:border-gray-700 
+              rounded-full border border-gray-300 dark:border-gray-700
               bg-white dark:bg-gray-800 px-3 py-1.5 text-sm
               focus:outline-none focus:border-pink-500"
             />
-            {/* <IoMdSearch
-              className="text-gray-500 dark:text-gray-400 group-hover:text-primary 
-              absolute top-1/2 -translate-y-1/2 right-3 text-lg"
-            /> */}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* Order Button */}
             <button
               onClick={() => alert("Ordering not available yet")}
@@ -50,6 +71,14 @@ const Navbar = () => {
 
             {/* Dark Mode */}
             <DarkMode />
+
+            <button
+              onClick={() => setMenuOpen((prev) => !prev)}
+              aria-label="Toggle menu"
+              className="md:hidden text-2xl p-1"
+            >
+              {menuOpen ? <HiX /> : <HiMenu />}
+            </button>
           </div>
         </div>
       </div>
@@ -62,6 +91,29 @@ const Navbar = () => {
             className="w-full rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm focus:outline-none focus:border-pink-500"
           />
         </div>
+      </div>
+
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          menuOpen ? "max-h-60" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col gap-1 px-4 pb-4 text-sm">
+          {navLinks.map((link) => (
+            <li
+              key={link.Label}
+              onClick={() => setMenuOpen(false)}
+              className="py-2 border-gray-100 dark:border-gray-800 cursor-pointer hover:text-secondary transition-colors"
+            >
+              <a
+                href={link.href}
+                className= "py-2 block cursor-pointer hover:text-secondary transition-colors"
+              >{link.Label}
+                </a>
+             
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
