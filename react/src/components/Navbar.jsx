@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DarkLogo from "../assets/darkLogo.png";
 import LightLogo from "../assets/lightLogo.png";
 import { FaCartShopping } from "react-icons/fa6";
@@ -6,10 +7,10 @@ import { HiMenu, HiX } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 
 const navLinks = [
-  { Label: "Home", href: "#home" },
-  { Label: "Shop", href: "#shop" },
-  { Label: "Contact", href: "#contact" },
-  { Label: "About us", href: "#about" },
+  { Label: "Home", path: "/" },
+  { Label: "Shop", path: "/shop" },
+  { Label: "Contact", path: "/contact" },
+  { Label: "About us", path: "/about" },
 ];
 
 const Navbar = () => {
@@ -35,12 +36,12 @@ const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                   className="py-2 border-gray-100 dark:border-gray-800"
                 >
-                  <a
-                    href={link.href}
+                  <Link to={link.path}
+                    
                     className="cursor-pointer hover:text-secondary transition-colors block"
                   >
                     {link.Label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -105,11 +106,10 @@ const Navbar = () => {
               onClick={() => setMenuOpen(false)}
               className="py-2 border-gray-100 dark:border-gray-800 cursor-pointer hover:text-secondary transition-colors"
             >
-              <a
-                href={link.href}
+              <Link to={link.href}
                 className= "py-2 block cursor-pointer hover:text-secondary transition-colors"
               >{link.Label}
-                </a>
+                </Link>
              
             </li>
           ))}

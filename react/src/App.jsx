@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
@@ -11,18 +12,14 @@ const App = () => {
       <div className='sticky top-0 z-50'>
         <Navbar />
       </div>
-      <section id="home">
-        <Home />
-      </section>
-      <section id="shop">
-        <Shop />
-      </section>
-      <section id="contact">
-        <ContactUs />
-      </section>
-      <section id="about">
-        <AboutUs />
-      </section>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </main>
     </div>
   );
 };
