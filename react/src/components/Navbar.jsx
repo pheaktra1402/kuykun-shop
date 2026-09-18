@@ -21,12 +21,12 @@ const Navbar = () => {
       <div className="bg-primary/40 py-3">
         <div className="container flex justify-between items-center gap-2 sm:gap-4">
           {/* 1. Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="font-bold text-xl sm:text-2xl flex items-center gap-2 shrink-0"
           >
             <img src={LightLogo} alt="logo" className="w-14 sm:w-20" />
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center">
             <ul className="flex gap-6 text-sm lg:text-base">
@@ -36,8 +36,8 @@ const Navbar = () => {
                   onClick={() => setMenuOpen(false)}
                   className="py-2 border-gray-100 dark:border-gray-800"
                 >
-                  <Link to={link.path}
-                    
+                  <Link
+                    to={link.path}
                     className="cursor-pointer hover:text-secondary transition-colors block"
                   >
                     {link.Label}
@@ -106,11 +106,12 @@ const Navbar = () => {
               onClick={() => setMenuOpen(false)}
               className="py-2 border-gray-100 dark:border-gray-800 cursor-pointer hover:text-secondary transition-colors"
             >
-              <Link to={link.href}
-                className= "py-2 block cursor-pointer hover:text-secondary transition-colors"
-              >{link.Label}
-                </Link>
-             
+              <Link
+                to={link.path}
+                className="py-2 block cursor-pointer hover:text-secondary transition-colors"
+              >
+                {link.Label}
+              </Link>
             </li>
           ))}
         </ul>

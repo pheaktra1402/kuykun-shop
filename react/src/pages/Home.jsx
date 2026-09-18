@@ -17,12 +17,11 @@ const Home = () => {
         <div className="">
         <h6 className="font-semibold text-3xl sm:text-5xl">Welcome to our shop</h6>
         <h2 className="font-light text-3xl mt-7 text-center">Fast & Reliable Shipping.</h2>
-        </div><a
-          href="#shop"
-          className="border-2 border-white text-white font-bold rounded bg-black/20 backdrop-blur-xs hover:bg-white hover:text-black transition duration-300"
+        </div><Link to="/shop"
+          className="border-2 border-white text-white font-bold rounded-xl bg-black/20 backdrop-blur-xs hover:bg-white hover:text-black transition duration-300"
         >
           <div className="my-2 mx-2">Shop Now</div>
-        </a>
+        </Link>
       </div>
     </div>
   );
