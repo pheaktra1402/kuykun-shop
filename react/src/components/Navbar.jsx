@@ -3,7 +3,7 @@ import DarkLogo from "../assets/darkLogo.png";
 import LightLogo from "../assets/lightLogo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
-import DarkMode from "./Darkmode";
+import DarkMode from "./DarkMode";
 
 const navLinks = [
   { Label: "Home", href: "#home" },
