@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import dress1 from "../assets/cloth/dress1.jpg";
 import dress2 from "../assets/cloth/dress2.jpg";
-import Sweater  from "../assets/cloth/Sweater.jpg";
-import Sweater1 from "../assets/cloth/Sweater1.jpg";
+import Sweater  from "../assets/cloth/sweater.jpg";
+import Sweater1 from "../assets/cloth/sweater1.jpg";
 
 
 const BestSeller = () => {
