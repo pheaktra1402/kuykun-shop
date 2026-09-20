@@ -6,6 +6,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 
+
 const navLinks = [
   { Label: "Home", path: "/" },
   { Label: "Shop", path: "/shop" },
