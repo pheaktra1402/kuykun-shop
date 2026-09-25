@@ -4,7 +4,7 @@ import dress1 from "../assets/cloth/dress1.jpg";
 import dress2 from "../assets/cloth/dress2.jpg";
 import Sweater from "../assets/cloth/sweater.jpg";
 
-import Sweater1 from "../assets/cloth/sweater1.jpg";
+import Sweater1 from "../assets/cloth/Sweater1.jpg";
 import chiffonCape from "../assets/cloth/chiffonCape.jpg";
 import croptop from "../assets/cloth/croptop.jpg";
 import croptop1 from "../assets/cloth/croptop1.jpg";
