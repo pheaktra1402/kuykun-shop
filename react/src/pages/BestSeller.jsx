@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import dress1 from "../assets/cloth/dress1.jpg";
 import dress2 from "../assets/cloth/dress2.jpg";
 import Sweater from "../assets/cloth/sweater.jpg";
+
 import Sweater1 from "../assets/cloth/sweater1.jpg";
 import chiffonCape from "../assets/cloth/chiffonCape.jpg";
 import croptop from "../assets/cloth/croptop.jpg";
@@ -100,13 +101,14 @@ const BestSeller = () => {
             <div>
               <FaStar size={15} color="#ffc107" />
             </div>
-            
+
             <div className="flex justify-between">
               <p className="text-pink-500 font-bold mt-1">{product.price}</p>
-              <button className="border rounded-lg px-4 hover:bg-pink-300 ">Buy</button>
+              <button className="border rounded-lg px-4 hover:bg-pink-300 ">
+                Buy
+              </button>
             </div>
           </div>
-          
         ))}
       </div>
     </div>
