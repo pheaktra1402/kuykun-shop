@@ -1,15 +1,20 @@
 import React, { useState } from "react";
+import { FaStar } from "react-icons/fa";
 import dress1 from "../assets/cloth/dress1.jpg";
 import dress2 from "../assets/cloth/dress2.jpg";
 import Sweater from "../assets/cloth/sweater.jpg";
 import Sweater1 from "../assets/cloth/sweater1.jpg";
+import chiffonCape from "../assets/cloth/chiffonCape.jpg";
+import croptop from "../assets/cloth/croptop.jpg";
+import croptop1 from "../assets/cloth/croptop1.jpg";
+import croptop2 from "../assets/cloth/croptop2.jpg";
 
 const BestSeller = () => {
   const [products, setProducts] = useState([
     {
       id: 1,
       img: dress1,
-      name: "Dress",
+      name: "Pink Ruffle Dress",
       category: "dress",
       size: "S,M,L",
       price: "20$",
@@ -17,7 +22,7 @@ const BestSeller = () => {
     {
       id: 2,
       img: Sweater1,
-      name: "sweeter",
+      name: "Blue Bow-Accent Cardigan",
       category: "sweeter",
       size: "S,M,L",
       price: "10$",
@@ -25,7 +30,7 @@ const BestSeller = () => {
     {
       id: 3,
       img: dress2,
-      name: "Dress",
+      name: "Off-Shoulder Pink Dress",
       category: "dress",
       size: "S,M,L",
       price: "16$",
@@ -33,10 +38,42 @@ const BestSeller = () => {
     {
       id: 4,
       img: Sweater,
-      name: "sweeter",
+      name: "White Cardigan with Pink Bows",
       category: "sweeter",
       size: "S,M,L",
       price: "13$",
+    },
+    {
+      id: 5,
+      img: chiffonCape,
+      name: "Brown Layered Poncho/Top",
+      category: "sweeter",
+      size: "S,M,L",
+      price: "10$",
+    },
+    {
+      id: 6,
+      img: croptop,
+      name: "T-Shirt",
+      category: "sweeter",
+      size: "S,M,L",
+      price: "9$",
+    },
+    {
+      id: 7,
+      img: croptop1,
+      name: "White Polo Shirt with Navy Collar",
+      category: "sweeter",
+      size: "S,M,L",
+      price: "3$",
+    },
+    {
+      id: 8,
+      img: croptop2,
+      name: "Cream Sailor-Collar Knit Top with Bow",
+      category: "sweeter",
+      size: "S,M,L",
+      price: "9$",
     },
   ]);
 
@@ -60,8 +97,16 @@ const BestSeller = () => {
               />
             </div>
             <h3 className="font-semibold text-lg">{product.name}</h3>
-            <p className="text-pink-500 font-bold mt-1">{product.price}</p>
+            <div>
+              <FaStar size={15} color="#ffc107" />
+            </div>
+            
+            <div className="flex justify-between">
+              <p className="text-pink-500 font-bold mt-1">{product.price}</p>
+              <button className="border rounded-lg px-4 hover:bg-pink-300 ">Buy</button>
+            </div>
           </div>
+          
         ))}
       </div>
     </div>
