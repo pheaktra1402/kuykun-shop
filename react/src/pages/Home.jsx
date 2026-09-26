@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import homeImage from "../assets/cloth/home.jpg";
 import BestSeller from "./BestSeller";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         <img
           src={homeImage}
           alt="Home showcase"
-          className="w-full h-full object-cover blur-sm"
+          className="w-full h-full object-cover blur-md"
         />
 
         <div className="absolute inset-0 bg-black/10"></div>
@@ -35,6 +36,7 @@ const Home = () => {
         </div>
       </div>
       <BestSeller />
+      <Footer/>
     </div>
   );
 };
