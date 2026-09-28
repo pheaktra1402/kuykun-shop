@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShoppingBag, Truck, ShieldCheck, HeartHandshake } from 'lucide-react';
 import AboutImage from '../assets/website/about.JPG'
+import Footer from './Footer';
 
 export default function AboutUs() {
   return (
@@ -101,7 +102,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
+      <Footer/>
     </div>
   );
 }
