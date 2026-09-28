@@ -8,10 +8,10 @@ const Home = () => {
   return (
     <div>
       <div className="relative w-full h-[450px] sm:h-[550px] overflow-hidden">
-        <img
+        <img 
           src={homeImage}
           alt="Home showcase"
-          className="w-full h-full object-cover blur-md"
+          className="w-full h-full object-cover blur-sm "
         />
 
         <div className="absolute inset-0 bg-black/10"></div>
