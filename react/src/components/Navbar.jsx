@@ -18,7 +18,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
+    <nav className="shadow-md bg-white sticky top-3 z-50 dark:bg-gray-900 dark:text-white duration-200">
       <div className="bg-primary/40 py-3">
         <div className="container flex justify-between items-center gap-2 sm:gap-4">
           {/* 1. Logo */}
